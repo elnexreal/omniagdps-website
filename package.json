@@ -1,0 +1,18 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-tailwind": "npx tailwindcss build -o dist/css/main.css",
+    "build-turbopack": "turbopack src/templates/index.html -o dist/index.html",
+    "build": "npm run build-tailwind && npm run build-turbopack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.2",
+    "turbopack": "^0.0.1"
+  }
+}
