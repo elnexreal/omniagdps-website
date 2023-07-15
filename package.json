@@ -1,18 +1,27 @@
 {
-  "name": "website",
+  "name": "web-v3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build-tailwind": "npx tailwindcss build -o dist/css/main.css",
-    "build-turbopack": "turbopack src/templates/index.html -o dist/index.html",
-    "build": "npm run build-tailwind && npm run build-turbopack"
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "test": "webpack && webpack serve --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@types/express-http-proxy": "^1.6.3",
+    "css-loader": "^6.8.1",
+    "sass-loader": "^13.3.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.85.1",
+    "webpack-cli": "^5.1.3",
+    "webpack-dev-server": "^4.15.0"
+  },
   "dependencies": {
-    "tailwindcss": "^3.3.2",
-    "turbopack": "^0.0.1"
-  }
+    "express": "^4.18.2",
+    "express-http-proxy": "^1.6.3",
+    "sass": "^1.62.1"
+  },
+  "description": ""
 }

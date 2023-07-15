@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous");
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
+
+@media only screen and (max-width: 810px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.segment {
+		flex-direction: column;
+	}
+}
+
+body {
+	color: white;
+	margin: auto;
+	background-color: #111111;
+}
+
+.gradientText {
+	background-image: linear-gradient(to right, #7f00ff, #e100ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	// background-color: red;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// background-image: linear-gradient(to right, #000133, #9e237e);
+	background-image: linear-gradient(to right, #000000, #0d0018);
+	font-family: Righteous;
+	#text {
+		padding: 10px;
+		transition: all 0.5s;
+		transform: skew(-15deg);
+		font-size: 48px;
+	}
+	#dev {
+		padding: 10px;
+		font-size: 24px;
+	}
+}
+
+.content {
+	display: flex;
+	row-gap: 20px;
+	flex-direction: column;
+	font-family: Rubik;
+}
+
+.segment {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	background-color: rgba($color: #ffffff, $alpha: 0.2);
+	border-radius: 20px;
+	margin: auto;
+	width: 70%;
+	* {
+		margin: 20px;
+	}
+	.title {
+		font-size: 48px;
+	}
+	.description {
+		font-size: 24px;
+	}
+	.left {
+		// flex: 0 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 13vw;
+			// max-height: 2vw;
+			border-radius: 15%;
+		}
+	}
+	.right {
+		display: flex;
+		flex-direction: column;
+		// width: 80%;
+	}
+	.stretch {
+		flex: 1 1 auto;
+	}
+}
