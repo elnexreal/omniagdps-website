@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous");
 @import url('https://fonts.googleapis.com/css2?family=Rubik');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,700');
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 870px) {
 	.navbar {
 		flex-direction: column;
 		align-items: center;
@@ -11,28 +12,65 @@
 	.segment {
 		flex-direction: column;
 	}
+	.left {
+		img {
+			width: 16vw;
+		}
+	}
+	.right {
+		.title {
+			font-size: 32px;
+		}
+		.description {
+			font-size: 18px;
+		}
+	}
+	.download-links {
+		flex-direction: column;
+	}
 }
-
+@media only screen and (min-width: 871px) {
+	.left {
+		img {
+			width: 8vw;
+		}
+	}
+	.right {
+		.title {
+			font-size: 48px;
+		}
+		.description {
+			font-size: 24px;
+		}
+	}
+}
+* {
+	transition: all 0.5s;
+	-webkit-user-select: none;
+	/* Safari */
+	-ms-user-select: none;
+	/* IE 10 and IE 11 */
+	user-select: none;
+	/* Standard syntax */
+}
 body {
 	color: white;
 	margin: auto;
 	background-color: #111111;
 }
-
 .gradientText {
 	background-image: linear-gradient(to right, #7f00ff, #e100ff);
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
 }
-
 .container {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
 	// background-color: red;
 }
-
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -42,7 +80,6 @@ body {
 	font-family: Righteous;
 	#text {
 		padding: 10px;
-		transition: all 0.5s;
 		transform: skew(-15deg);
 		font-size: 48px;
 	}
@@ -51,14 +88,12 @@ body {
 		font-size: 24px;
 	}
 }
-
 .content {
 	display: flex;
 	row-gap: 20px;
 	flex-direction: column;
 	font-family: Rubik;
 }
-
 .segment {
 	display: flex;
 	justify-content: space-between;
@@ -70,29 +105,66 @@ body {
 	* {
 		margin: 20px;
 	}
-	.title {
-		font-size: 48px;
-	}
-	.description {
-		font-size: 24px;
-	}
 	.left {
 		// flex: 0 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		img {
-			max-width: 13vw;
-			// max-height: 2vw;
-			border-radius: 15%;
-		}
+		// img {
+		// 	// width: 8vw;
+		// 	// max-height: 2vw;
+		// 	// border-radius: 15%;
+		// }
 	}
 	.right {
+		text-align: center;
 		display: flex;
 		flex-direction: column;
 		// width: 80%;
 	}
 	.stretch {
 		flex: 1 1 auto;
+	}
+}
+
+.segment:hover {
+	background-color: rgba($color: #ffffff, $alpha: 0.3);
+	padding: 20px;
+	img {
+		transform: scale(1.2);
+	}
+}
+
+.download-links {
+	display: flex;
+	margin: auto;
+	.downloadButton {
+		border-radius: 15px;
+		text-decoration: none;
+		color: #ffffff;
+		font-family: 'IBM Plex Mono';
+		padding: 20px;
+		background-color: #333333;
+	}
+	.downloadButton:hover {
+		// color: black;
+		background-color: #5000a0;
+		box-shadow: 0px 0px 20px 10px #00000055
+	}
+}
+.footer {
+	flex-grow: 1;
+	padding: 10px;
+	row-gap: 10px;
+	font-family: Rubik;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: #000000;
+	a {
+		text-decoration: none;
+		color: #dddddd;
 	}
 }
